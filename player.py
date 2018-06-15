@@ -15,7 +15,6 @@ from hangman import hangman
 def main(arg):
     game = hangman.HangmanGame(arg)
     game.play()
-    pass
 
 if __name__ == "__main__":
     import sys
