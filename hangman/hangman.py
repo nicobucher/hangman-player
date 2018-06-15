@@ -33,7 +33,6 @@ class HangmanGame(object):
         self.poll_process(self._proc)
         for line in iter(self._proc.stdout.readline, 'Guess: \n'):
             print(line)
-            pass
         self._proc.stdin.write(char + '\n')
         self._proc.stdin.flush()
         line = self._proc.stdout.readline()
