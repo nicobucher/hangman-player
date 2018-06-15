@@ -4,6 +4,7 @@ Created on 15.06.2018
 @author: nicobucher
 '''
 import subprocess
+import random
 from time import sleep
 
 class HangmanGame(object):
@@ -19,6 +20,7 @@ class HangmanGame(object):
         Constructor
         '''
         self._last_answer = ''
+        self._chars = ''.join(random.sample(self._chars,len(self._chars)))
         self._executable = " ".join(executable )
         self._proc = subprocess.Popen(self._executable, 
                                          universal_newlines=True, 
