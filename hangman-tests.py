@@ -13,7 +13,7 @@ class TestHangman(unittest.TestCase):
 
     def test_init(self):
         game = hangman.HangmanGame('test')
-        self.assertEqual(game._chars,'abcdefghijklmnopqrstuvwxyz')
+        self.assertNotEqual(game._chars,'abcdefghijklmnopqrstuvwxyz')
 
     def test_answer_correct(self):
         game = hangman.HangmanGame('test')

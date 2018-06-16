@@ -4,6 +4,7 @@ Created on 15.06.2018
 @author: nicobucher
 '''
 import subprocess
+import random
 from time import sleep
 
 class HangmanGame(object):
@@ -19,6 +20,7 @@ class HangmanGame(object):
         Constructor
         '''
         self._last_answer = ''
+        self._chars = ''.join(random.sample(self._chars,len(self._chars)))
         self._executable = " ".join(executable )
         self._proc = subprocess.Popen(self._executable, 
                                          universal_newlines=True, 
@@ -33,7 +35,6 @@ class HangmanGame(object):
         self.poll_process(self._proc)
         for line in iter(self._proc.stdout.readline, 'Guess: \n'):
             print(line)
-            pass
         self._proc.stdin.write(char + '\n')
         self._proc.stdin.flush()
         line = self._proc.stdout.readline()
