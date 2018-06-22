@@ -4,11 +4,6 @@
     @author: nicobucher
     
     A player for the hangman game 
-
-    As proposed here:
-    https://techdevguide.withgoogle.com/paths/foundational/hangman-solutions-open-source-answer/#!
-    and here
-    https://codegolf.stackexchange.com/questions/25496/write-a-hangman-solver 
 '''
 from hangman import hangman
 
